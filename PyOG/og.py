@@ -48,40 +48,6 @@ class PyOG(object):
                 optional_og_data.update({key:val})
         return optional_og_data
 
-'''
-def extract_basic_og_info(url): 
-    if not url:
-        raise Exception("Please pass the URL.Can not retrive OG information without URL.")
-    resp = {}
-    response = urllib2.urlopen(url)
-    html = response.read()
-    parsed_html = BeautifulSoup(html)
-    resp = {'title': _extract_og_key(parsed_html, 'title'),
-            'image': _extract_og_key(parsed_html, 'image'),
-            'url': _extract_og_key(parsed_html, 'url'),
-            'type': _extract_og_key(parsed_html, 'type'),
-            'description': _extract_og_key(parsed_html, 'description')
-            }
-    print resp
-    return resp
-
-def extract_optional_og_info(url):
-    if not url:
-        raise Exception("Please pass the URL.Can not retrive OG information without URL.")
-    resp = {}
-    response = urllib2.urlopen(url)
-    html = response.read()
-    parsed_html = BeautifulSoup(html)
-    resp = {'audio': _extract_og_key(parsed_html, 'audio'),
-            'determiner': _extract_og_key(parsed_html, 'determiner'),
-            'locale': _extract_og_key(parsed_html, 'locale'),
-            'site_name': _extract_og_key(parsed_html, 'site_name'),
-            'video': _extract_og_key(parsed_html, 'video')
-            }
-    print resp
-    return resp
-
-'''
 
 if __name__ == '__main__':
     og_object = PyOG('http://www.imdb.com/title/tt2543164/?pf_rd_m=A2FGELUUNOQJNL&pf_rd_p=2495768482&pf_rd_r=01VA8VJV6TES3DRV8JKV&pf_rd_s=right-4&pf_rd_t=15061&pf_rd_i=homepage&ref_=hm_otw_t1')
